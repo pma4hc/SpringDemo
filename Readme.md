@@ -51,6 +51,19 @@ DEMO_SECRET=${your keyvault secret link as above template}
   return value of DEMO_SECRET, if we integrated the app with Azure Key vault successfully, it will return value of the Key vault secret
 
 
+
+
+## Enable H2 Profile ("h2")
+
+Can not enable together with "sql" profile
+The APIs are the same with "sql" profile but data stored in RAM
+To enable Azure SQL features, set the following environment variables:
+```bash
+SPRING_PROFILES_ACTIVE=h2
+```
+
+
+
 ## Steps to build docker image and push it to ACR
 mvn clean package
 docker build -t pma4acr.azurecr.io/springdemo:latest .

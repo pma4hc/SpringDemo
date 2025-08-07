@@ -17,7 +17,7 @@ public class NotSqlProfileCondition implements Condition {
   public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
     String[] activeProfiles = context.getEnvironment().getActiveProfiles();
     for (String profile : activeProfiles) {
-      if ("sql".equalsIgnoreCase(profile)) {
+      if ("sql".equalsIgnoreCase(profile) || "h2".equalsIgnoreCase(profile)) {
         return false; // Do NOT exclude if "sql" is active
       }
     }

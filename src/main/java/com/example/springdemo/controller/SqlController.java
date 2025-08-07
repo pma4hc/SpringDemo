@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/sql")
-@Profile("sql")
+@Profile({"sql", "h2"})
 @RequiredArgsConstructor
 public class SqlController {
 
