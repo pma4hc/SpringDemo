@@ -18,17 +18,23 @@ import org.springframework.context.annotation.Profile;
 @Entity
 @Profile({"sql", "h2"})
 @Data
-@Table(name = "todo")
+@Table(name = "users")
 public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  private String description;
+  private String username;
 
-  private String details;
+  private String email;
 
-  private boolean done;
+  private String position;
+
+  private String department;
+
+  private String phoneNumber;
+
+  private boolean isActive;
 
 }
