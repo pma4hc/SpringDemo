@@ -8,13 +8,13 @@
 
 package com.example.springdemo.repository;
 
-import com.example.springdemo.model.Todo;
+import com.example.springdemo.model.User;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 @Profile({"sql", "h2"})
-public interface TodoRepository extends JpaRepository<Todo, Long> {
+public interface TodoRepository extends JpaRepository<User, Long> {
 
 }

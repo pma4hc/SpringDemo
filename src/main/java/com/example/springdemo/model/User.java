@@ -16,10 +16,10 @@ import lombok.Data;
 import org.springframework.context.annotation.Profile;
 
 @Entity
-@Profile("sql")
+@Profile({"sql", "h2"})
 @Data
 @Table(name = "todo")
-public class Todo {
+public class User {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
